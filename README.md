@@ -1,91 +1,86 @@
-# Local Multimodal AI Chat
-## Overview
+# Lokaler multimodaler KI-Chat
+## Übersicht
 
-Local Multimodal AI Chat is a hands-on project aimed at learning how to build a multimodal chat application. This project is all about integrating different AI models to handle audio, images, and PDFs in a single chat interface. It's a great way for anyone interested in AI and software development to get practical experience with these technologies.
+Local Multimodal AI Chat ist ein praktisches Projekt, das darauf abzielt, zu lernen, wie man eine multimodale Chat-Anwendung erstellt. Bei diesem Projekt geht es darum, verschiedene KI-Modelle zu integrieren, um Audio, Bilder und PDFs in einer einzigen Chat-Oberfläche zu verarbeiten. Es ist eine großartige Möglichkeit für alle, die sich für KI und Softwareentwicklung interessieren, praktische Erfahrungen mit diesen Technologien zu sammeln.
 
-The main purpose here is to learn by doing. You'll see how different pieces like Whisper AI for audio, LLaVA for image processing, and Chroma DB for PDFs come together in a chat application. A full tutorial on how I created this repository can be found on my [youtube channel](https://youtu.be/CUjO8b6_ZuM).
-But, this is still a work in progress. There's plenty of room for improvement, and that's where you come in.
+Der Hauptzweck hier ist das Lernen durch Handeln. Sie werden sehen, wie verschiedene Teile wie Whisper AI für Audio, LLaVA für die Bildverarbeitung und Chroma DB für PDFs in einer Chat-Anwendung zusammenkommen. Eine vollständige Anleitung, wie ich dieses Repository erstellt habe, finden Sie auf meinem [Youtube-Kanal](https://youtu.be/CUjO8b6_ZuM).
+Aber das ist noch in Arbeit. Es gibt viel Raum für Verbesserungen, und hier kommen Sie ins Spiel.
 
-I'm really open to pull requests. Whether you have ideas for new features, ways to make the code better, or just want to fix a bug, your contributions are welcome. This project is as much about learning from each other as it is about building something cool.
+Ich bin sehr offen für Pull Requests. Egal, ob Sie Ideen für neue Funktionen haben, Möglichkeiten zur Verbesserung des Codes oder einfach nur einen Fehler beheben möchten, Ihre Beiträge sind willkommen. Bei diesem Projekt geht es nicht nur darum, voneinander zu lernen, sondern auch darum, etwas Cooles zu bauen.
 
-So, if you're interested in AI chat applications and want to dive into how they're built, join in. Your code and ideas can help make this project better for everyone who wants to learn more about building with AI.
+Wenn Sie sich also für KI-Chat-Anwendungen interessieren und in deren Aufbau eintauchen möchten, machen Sie mit. Ihr Code und Ihre Ideen können dazu beitragen, dieses Projekt für alle zu verbessern, die mehr über das Bauen mit KI erfahren möchten.
 
-## Features
+## Eigenschaften
 
-- **Quantized Model Integration**: This app uses what are called "quantized models." These are special because they are designed to work well on regular consumer hardware, like the kind most of us have at home or in our offices. Normally, the original versions of these models are really big and need more powerful computers to run them. But quantized models are optimized to be smaller and more efficient, without losing much performance. This means you can use this app and its features without needing a super powerful computer. [Quantized Models from TheBloke](https://huggingface.co/TheBloke)
+- **Quantisierte Modellintegration**: Diese App verwendet sogenannte "quantisierte Modelle". Diese sind etwas Besonderes, weil sie so konzipiert sind, dass sie gut auf normaler Consumer-Hardware funktionieren, wie sie die meisten von uns zu Hause oder in unseren Büros haben. Normalerweise sind die Originalversionen dieser Modelle sehr groß und benötigen leistungsfähigere Computer, um sie auszuführen. Quantisierte Modelle sind jedoch so optimiert, dass sie kleiner und effizienter sind, ohne viel Leistung zu verlieren. Das bedeutet, dass Sie diese App und ihre Funktionen nutzen können, ohne einen superleistungsstarken Computer zu benötigen. [Quantisierte Modelle von TheBloke] (https://huggingface.co/TheBloke)
 
-- **Audio Chatting with Whisper AI**: Leveraging Whisper AI's robust transcription capabilities, this app offers a sophisticated audio messaging experience. The integration of Whisper AI allows for accurate interpretation and response to voice inputs, enhancing the natural flow of conversations.
-[Whisper models](https://huggingface.co/collections/openai/whisper-release-6501bba2cf999715fd953013)
+- **Audio-Chat mit Whisper AI**: Diese App nutzt die robusten Transkriptionsfunktionen von Whisper AI und bietet ein ausgeklügeltes Audio-Messaging-Erlebnis. Die Integration von Whisper AI ermöglicht eine genaue Interpretation und Reaktion auf Spracheingaben, wodurch der natürliche Gesprächsfluss verbessert wird.
+[Flüstermodelle] (https://huggingface.co/collections/openai/whisper-release-6501bba2cf999715fd953013)
 
-- **Image Chatting with LLaVA**: The app integrates LLaVA for image processing, which is essentially a fine-tuned LLaMA model equipped to understand image embeddings. These embeddings are generated using a CLIP model, making LLaVA function like a pipeline that brings together advanced text and image understanding. With LLaVA, the chat experience becomes more interactive and engaging, especially when it comes to handling and conversing about visual content. [llama-cpp-python repo for Llava loading](https://github.com/abetlen/llama-cpp-python)
+- **Bild-Chat mit LLaVA**: Die App integriert LLaVA für die Bildverarbeitung, bei dem es sich im Wesentlichen um ein fein abgestimmtes LLaMA-Modell handelt, das für das Verständnis von Bildeinbettungen geeignet ist. Diese Einbettungen werden mithilfe eines CLIP-Modells generiert, wodurch LLaVA wie eine Pipeline funktioniert, die erweitertes Text- und Bildverständnis zusammenführt. Mit LLaVA wird das Chat-Erlebnis interaktiver und ansprechender, insbesondere wenn es um den Umgang mit und die Konversation über visuelle Inhalte geht. [llama-cpp-python repo zum Laden von Llava] (https://github.com/abetlen/llama-cpp-python)
 
-- **PDF Chatting with Chroma DB**: The app is tailored for both professional and academic uses, integrating Chroma DB as a vector database for efficient PDF interactions. This feature allows users to engage with their own PDF files locally on their device. Whether it's for reviewing business reports, academic papers, or any other PDF document, the app offers a seamless experience. It provides an effective way for users to interact with their PDFs, leveraging the power of AI to understand and respond to content within these documents. This makes it a valuable tool for personal use, where one can extract insights, summaries, and engage in a unique form of dialogue with the text in their PDF files. [Chroma website](https://docs.trychroma.com/)
+- **PDF-Chat mit Chroma DB**: Die App ist sowohl für den professionellen als auch für den akademischen Einsatz zugeschnitten und integriert Chroma DB als Vektordatenbank für effiziente PDF-Interaktionen. Diese Funktion ermöglicht es Benutzern, mit ihren eigenen PDF-Dateien lokal auf ihrem Gerät zu interagieren. Egal, ob es sich um die Überprüfung von Geschäftsberichten, wissenschaftlichen Arbeiten oder anderen PDF-Dokumenten handelt, die App bietet ein nahtloses Erlebnis. Es bietet Benutzern eine effektive Möglichkeit, mit ihren PDFs zu interagieren und die Leistungsfähigkeit der KI zu nutzen, um Inhalte in diesen Dokumenten zu verstehen und darauf zu reagieren. Dies macht es zu einem wertvollen Werkzeug für den persönlichen Gebrauch, bei dem man Erkenntnisse und Zusammenfassungen extrahieren und eine einzigartige Form des Dialogs mit dem Text in seinen PDF-Dateien führen kann. [Chroma-Webseite] (https://docs.trychroma.com/)
 
 
-## Getting Started
+## Erste Schritte
 
-To get started with Local Multimodal AI Chat, clone the repository and follow these simple steps:
+Um mit dem lokalen multimodalen KI-Chat zu beginnen, klonen Sie das Repository und führen Sie die folgenden einfachen Schritte aus:
 
-1. **Create a Virtual Environment**: I am using Python 3.10.12 currently
+1. **Erstellen Sie eine virtuelle Umgebung**: Ich verwende derzeit Python 3.10.12
 
-2. **Upgrade pip**: ```pip install --upgrade pip```
+2. **Upgrade-Pip**: '''pip install --upgrade pip'''
 
-3. **Install Requirements**: ```pip install -r requirements.txt```
+3. **Installationsanforderungen**: '''pip install -r requirements.txt'''
    
-   **Windows Users:** The installation might differ a bit for you, if you encounter errors you can't solve, please open an Issue here on github.
+   **Windows-Benutzer:** Die Installation kann für Sie etwas anders sein, wenn Sie auf Fehler stoßen, die Sie nicht beheben können, öffnen Sie bitte ein Problem hier auf Github.
 
-4. **Setting Up Local Models**: Download the models you want to implement. [Here](https://huggingface.co/mys/ggml_llava-v1.5-7b/tree/main) is the llava model I used for image chat (ggml-model-q5_k.gguf and mmproj-model-f16.gguf). 
-And the [quantized mistral model](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF) form TheBloke (mistral-7b-instruct-v0.1.Q5_K_M.gguf).
+4. **Einrichten lokaler Modelle**: Laden Sie die Modelle herunter, die Sie implementieren möchten. [Hier] (https://huggingface.co/mys/ggml_llava-v1.5-7b/tree/main) ist das Llava-Modell, das ich für den Bild-Chat verwendet habe (ggml-model-q5_k.gguf und mmproj-model-f16.gguf). 
+Und das [quantisierte Mistral Modell](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF) von TheBloke (mistral-7b-instruct-v0.1.Q5_K_M.gguf).
 
-5. **Customize config file**: Check the config file and change accordingly to the models you downloaded.
+5. **Konfigurationsdatei anpassen**: Überprüfen Sie die Konfigurationsdatei und ändern Sie sie entsprechend zu den heruntergeladenen Modellen.
 
-6. **Optional - Change Profile Pictures**: Place your user_image.pnd and/or bot_image.png inside the chat_icons folder. 
+6. **Optional - Profilbilder ändern**: Legen Sie Ihre user_image.pnd und/oder bot_image.png im chat_icons Ordner ab. 
 
-7. **Enter commands in terminal**: 
-   1. ```python3 database_operations.py``` This will initialize the sqlite database for the chat sessions.
-   2. ```streamlit run app.py```
+7. **Geben Sie Befehle in das Terminal ein**: 
+   1. '''python3 database_operations.py''' Dadurch wird die SQLite-Datenbank für die Chat-Sitzungen initialisiert.
+   2. '''Stromlinienförmiger Lauf app.py'''
 
 
 ## Changelog
 ### 17.02.2024:
-- **Input Widget Update**: Replaced st.text_input with st.chat_input to enhance interaction by leveraging a more chat-oriented UI, facilitating user engagement.
-- **Sidebar Adjustment**: Relocated the audio recording button to the sidebar for a cleaner and more organized user interface, improving accessibility and user experience.
+- **Eingabe-Widget-Update**: st.text_input wurde durch st.chat_input ersetzt, um die Interaktion zu verbessern, indem eine Chat-orientierte Benutzeroberfläche genutzt wird, die die Benutzerinteraktion erleichtert.
+- **Sidebar-Anpassung**: Die Audioaufnahme-Taste wurde in die Seitenleiste verlegt, um eine übersichtlichere und übersichtlichere Benutzeroberfläche zu schaffen und die Zugänglichkeit und Benutzerfreundlichkeit zu verbessern.
 
 ### 10.02.2024:
-- **License Added**: Implemented the GNU General Public License v3.0 to ensure the project is freely available for use, modification, and distribution under the terms of this license. A comprehensive copyright and license notice has been included in the main file (app.py) to clearly communicate the terms under which the project is offered. This addition aims to protect both the contributors' and users' rights, fostering an open and collaborative development environment. For full license details, refer to the LICENSE file in the project repository.
-- **Caching for Chat Model**: Introduced caching for the chat model to prevent it from being reloaded with every script execution. This optimization significantly improves performance by reducing load times 
-- **Config File Expansion**: Expanded the configuration file to accommodate new settings and features, providing greater flexibility and customization options for the chat application.
+- **Lizenz hinzugefügt**: Die GNU General Public License v3.0 wurde implementiert, um sicherzustellen, dass das Projekt unter den Bedingungen dieser Lizenz frei zur Nutzung, Änderung und Verbreitung verfügbar ist. Ein umfassender Urheberrechts- und Lizenzhinweis wurde in die Hauptdatei (app.py) aufgenommen, um die Bedingungen, unter denen das Projekt angeboten wird, klar zu kommunizieren. Diese Ergänzung zielt darauf ab, sowohl die Rechte der Mitwirkenden als auch die der Benutzer zu schützen und eine offene und kollaborative Entwicklungsumgebung zu fördern. Vollständige Lizenzdetails finden Sie in der LICENSE-Datei im Projekt-Repository.
+- **Caching für Chat-Modell**: Caching für das Chat-Modell eingeführt, um zu verhindern, dass es bei jeder Skriptausführung neu geladen wird. Diese Optimierung verbessert die Leistung erheblich, indem die Ladezeiten verkürzt werden 
+- **Erweiterung der Konfigurationsdatei**: Die Konfigurationsdatei wurde erweitert, um neue Einstellungen und Funktionen aufzunehmen und so mehr Flexibilität und Anpassungsoptionen für die Chat-Anwendung zu bieten.
 
 
 ### 09.02.2024:
 
-- **SQLite Database for Chat History**: Implemented a SQLite database to store the chat history.
-- **Displaying Images and Audio Files in Chat**: Chat history now supports displaying images and audio files.
-- **Added Button to delete Chat History**
-- **Updated langchain**: Runs now with the current langchain version 0.1.6
+- SQLite-Datenbank für den Chatverlauf**: Es wurde eine SQLite-Datenbank zum Speichern des Chatverlaufs implementiert.
+- **Anzeigen von Bildern und Audiodateien im Chat**: Der Chatverlauf unterstützt jetzt die Anzeige von Bildern und Audiodateien.
+- **Schaltfläche zum Löschen des Chatverlaufs hinzugefügt**
+- **Aktualisierte Langchain**: Läuft jetzt mit der aktuellen Langchain-Version 0.1.6
 
 ### 16.01.2024:
-- **Windows User DateTime Format Issue:** Windows users seemed to have problems with the datetime format of the saved JSON chat histories. I changed the format in the `ultis.py` file to `"%Y_%m_%d_%H_%M_%S"`, which should solve the issue. Feel free to change it to your liking.
-- **UI Adjustment for Chat Scrolling:** Scrolling down in the chat annoyed me, so the text input box and the latest message are at the top now.
+- **Problem mit dem DateTime-Format des Windows-Benutzers:** Windows-Benutzer schienen Probleme mit dem datetime-Format der gespeicherten JSON-Chatverläufe zu haben. Ich habe das Format in der 'ultis.py'-Datei in '"%Y_%m_%d_%H_%M_%S" geändert, was das Problem lösen sollte. Fühlen Sie sich frei, es nach Ihren Wünschen zu ändern.
+- **UI-Anpassung für Chat-Scrolling:** Das Herunterscrollen im Chat hat mich genervt, daher sind das Texteingabefeld und die letzte Nachricht jetzt ganz oben.
 
 ### 12.01.2024:
-- **Issue with Message Sending:** After writing in the text field and pressing the send button, the LLM would not generate a response. 
-- **Cause of the Issue:** This happened because the `clear_input_field` callback from the button changes the text field value to an empty string after saving the user question. However, changing the text field value triggers the callback from the text field widget, setting the `user_question` to an empty string again. As a result, the LLM is not called.
-- **Implemented Workaround:** As a workaround, I added a check before changing the `user_question` value.
+- **Problem mit dem Senden von Nachrichten:** Nach dem Schreiben in das Textfeld und dem Drücken der Schaltfläche "Senden" generierte der LLM keine Antwort. 
+- **Ursache des Problems:** Dies ist passiert, weil der Rückruf "clear_input_field" von der Schaltfläche den Wert des Textfelds nach dem Speichern der Benutzerfrage in eine leere Zeichenfolge ändert. Wenn Sie jedoch den Wert des Textfelds ändern, wird der Rückruf vom Textfeld-Widget ausgelöst, wobei der user_question erneut auf eine leere Zeichenfolge gesetzt wird. Infolgedessen wird der LLM nicht aufgerufen.
+- **Implementierte Problemumgehung:** Um dieses Problem zu umgehen, habe ich eine Prüfung hinzugefügt, bevor ich den Wert "user_question" geändert habe.
 
-## Possible Improvements
-- ~~Add Model Caching.~~
-- ~~Add Images and Audio to Chat History Saving and Loading.~~
-- ~~Use a Database to Save the Chat History.~~
-- Integrate Ollama, OpenAI, Gemini, or Other Model Providers.
-- Add Image Generator Model.
-- Authentication Mechanism.
-- Change Theme.
-- Separate Frontend and Backend Code for Better Deployment.
+## Mögliche Verbesserungen
+- ~~Modell-Caching hinzugefügt.~~
+- ~~Füge Bilder und Audio zum Speichern und Laden des Chatverlaufs hinzu.~~
+- ~~Verwende eine Datenbank, um den Chatverlauf zu speichern.~~
+- Integrieren Sie Ollama, OpenAI, Gemini oder andere Modellanbieter.
+- Bildgenerator-Modell hinzugefügt.
+- Authentifizierungsmechanismus.
+- Ändern Sie das Thema.
+- Trennen Sie Frontend- und Backend-Code für eine bessere Bereitstellung.
 
-## Contact Information
-
-For any questions, please contact me at:
-
-- Email: leonsander.consulting@gmail.com
-- Twitter: [@leonsanderai](https://twitter.com/leonsanderai)
+## Kontaktinformationen
